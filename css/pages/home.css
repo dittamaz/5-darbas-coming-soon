@@ -2,6 +2,14 @@
 @import '../base/base.css';
 @import '../base/layout.css';
 
+.hero {
+    background-image: url(..//../img/background.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    height: 100vh;
+}
 /* 3rd-party */
 
 /* components */

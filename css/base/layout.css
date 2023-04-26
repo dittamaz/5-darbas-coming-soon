@@ -1,6 +1,7 @@
 .container {
     width: 100%;
     padding: 60px 0;
+    min-height: 100%;
 }
 
 .container > .row-short {
@@ -14,16 +15,15 @@
 .container > .row {
     display: flex;
     flex-wrap: wrap;
-    gap: 60px 0;
+    gap: 60px 10%;
     width: 1000px;
     margin: 0 calc(50% - 500px);
 }
 .container .column {
     width: 50%;
 }
-.container .right-column {
+.container.right-column {
     width: 40%;
-    margin-left: auto;
 }
 
 @media (max-width: 11000px) {
@@ -46,7 +46,7 @@
         width: 400px;
         margin: 0 calc(50% - 200px);
     }
-    .container .column 
+    .container .column,
     .container .right-column {
         width: 100%;
     }

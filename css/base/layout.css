@@ -1,66 +1,81 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 .container {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     padding: 60px 0;
-    min-height: 100%;
+    align-items: center;
+}
+
+.container > .row {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
 }
 
 .container > .row-short {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 20px;
     width: 600px;
-    margin: 0 calc(50% - 300px);
-}
-.container > .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 60px 10%;
-    width: 1000px;
-    margin: 0 calc(50% - 500px);
-}
-.container .column {
-    width: 50%;
-}
-.container.right-column {
-    width: 40%;
 }
 
-@media (max-width: 11000px) {
-    .container > .row {
-        width: 800px;
-        margin: 0 calc(50% - 400px);
-    }
+.container .left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.container .right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
 }
 
 @media (max-width: 900px) {
     .container > .row {
         width: 600px;
-        margin: 0 calc(50% - 300px);
     }
 }
 
 @media (max-width: 700px) {
-    .container > .row,
     .container > .row-short {
+        flex-direction: column;
         width: 400px;
-        margin: 0 calc(50% - 200px);
     }
-    .container .column,
-    .container .right-column {
+
+    .container > .row {
+        width: 400px;
+        gap: 40px;
+    }
+
+    main.container > .row {
+        flex-direction: column;
+    }
+
+    .container .left {
+        width: 100%;
+    }
+
+    .container .right {
         width: 100%;
     }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 460px) {
     .container {
-        padding-right: 20px;
         padding-left: 20px;
-    }
- 
-    .container > .row, 
-    .container > .row-short {
+        padding-right: 20px;
         width: 100%;
-        margin: 0;
+    }
+    .container > .row-short,
+    .container > .row {
+        width: 100%;
     }
 }
